@@ -25,7 +25,7 @@ function particlesAnimation()
 		let x = event.x,
 			y = event.y;
 
-		for (let i in particles)
+		for (let i = 0; i < particles.length; i++)
 		{
 			let len = length(x, y, particles[i].x, particles[i].y);
 			if (len < properties.mouseRadius)
@@ -78,9 +78,9 @@ function particlesAnimation()
 	function drawLines()
 	{
 		let x1, y1, x2, y2, len, opacity;
-		for (let i in particles)
+		for (let i = 0; i < particles.length; i++)
 		{
-			for (let j in particles)
+			for (let j = 0; j < particles.length; j++)
 			{
 				x1 = particles[i].x;
 				y1 = particles[i].y;
@@ -113,12 +113,20 @@ function particlesAnimation()
 
 
 	class Particle{
+
 		constructor()
 		{
 			this.x = Math.random() * w;
 			this.y = Math.random() * h;
 			this.dx = Math.random() * (2 * properties.maxParticleSpeed) - properties.maxParticleSpeed;
 			this.dy = Math.random() * (2 * properties.maxParticleSpeed) - properties.maxParticleSpeed;
+		}
+
+		fixOnPosition(x, y) {
+			this.x = x;
+			this.y = y;
+			this.dx = 0;
+			this.dy = 0;
 		}
 
 		draw()

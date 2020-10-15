@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8516f94c-3b3f-4534-8089-101b5288e548" name="Default Changelist" comment="" />
+    <list default="true" id="8516f94c-3b3f-4534-8089-101b5288e548" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/webanimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/webanimation.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +23,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1drgi0RDqS2Zx1Hs1x3fgJYt6kb" />
   <component name="ProjectViewState">
@@ -85,6 +92,8 @@
       <workItem from="1593809732239" duration="1784000" />
       <workItem from="1593811548860" duration="1030000" />
       <workItem from="1593890046401" duration="104000" />
+      <workItem from="1602786881646" duration="545000" />
+      <workItem from="1602787446939" duration="961000" />
     </task>
     <servers />
   </component>
@@ -92,17 +101,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1593598663523">
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1602787477776">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593598663523" />
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1593811558413">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593811558413" />
-    <state x="812" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1593430948157">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="812" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593430948157" />
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1602787477776" />
   </component>
 </project>
