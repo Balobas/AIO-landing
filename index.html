@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>AIO</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="" href="">
+	<script type="text/javascript" src="scripts/webanimation.js"></script>
+	<script type="text/javascript" src="scripts/parallax.js"></script>
+</head>
+<body>
+
+	<div class="header" id="header">
+		<div class="header-text">A.I.O.</div>
+	</div>
+
+	<div class="main-block info-block">
+
+		<canvas id="web-canvas" class="full-block">
+
+		</canvas>
+		<script>
+			particlesAnimation();
+		</script>
+
+		<div class="title" id="main-title">All In One</div>
+
+
+		<div class="social vk" id="vk-logo"><img src="imgs/vk.png" alt=""></div>
+		<div class="social fb" id="fb-logo"><img src="imgs/fb.png" alt=""></div>
+		<div class="social tw" id="tw-logo"><img src="imgs/tw.png" alt=""></div>
+		<div class="social tg" id="tg-logo"><img src="imgs/tg.png" alt=""></div>
+
+
+
+	</div>
+	<script>
+		let mainBlock = document.querySelector('.main-block');
+		parallax(mainBlock, document.getElementById('main-title'), 0.5);
+		parallax(mainBlock, document.getElementById('vk-logo'), 0.2);
+		parallax(mainBlock, document.getElementById('fb-logo'), 0.1);
+		parallax(mainBlock, document.getElementById('tw-logo'), 0.1);
+		parallax(mainBlock, document.getElementById('tg-logo'), 0.3);
+
+		window.addEventListener('scroll', () => {
+			if (scrollY - pageYOffset > mainBlock.getBoundingClientRect().bottom)
+			{
+				document.getElementById('header').style.opacity = '1';
+			}
+			else
+			{
+				document.getElementById('header').style.opacity = '0';
+			}
+		});
+	</script>
+
+
+	<div class="info-block" id="inf-2">
+
+		<div class="text-block">
+			<span class="text">All your social networks in one application</span>
+		</div>
+		<div class="phone-wrapper">
+			<div class="phone"></div>
+			<div class="phone-content" >
+				<div class="phone-header-bar"></div>
+				<div class="application-header" id="app-header">
+					<div class="h-btn">all</div>
+					<div class="h-btn">vk</div>
+					<div class="h-btn">tw</div>
+					<div class="h-btn">fb</div>
+					<div class="h-btn">tg</div>
+				</div>
+
+				<div class="messages-wrapper" id="messages-wrapper">
+					<div class="message vk-message message-1">
+						<div class="photo">
+							<a href="http://www.freepik.com">Designed by Freepik</a>
+							<img src="imgs/avatar1.png" alt="Designed by Freepik">
+						</div>
+						<div class="username">
+							<span class="username-text">Vlad Balobanof</span>
+						</div>
+						<div class="social-icon">
+
+						</div>
+						<div class="date">
+
+						</div>
+						<div class="text">
+							<span class="message-text">Hey! We forgot Nikita!</span>
+						</div>
+					</div>
+					<div class="message tw-message message-2">
+						<div class="photo">
+							<a href="http://www.freepik.com">Designed by Freepik</a>
+							<img src="imgs/avatar2.png" alt="Designed by Freepik">
+						</div>
+						<div class="username">
+							<span class="username-text">Kakayato Baba</span>
+						</div>
+						<div class="social-icon">
+
+						</div>
+						<div class="date">
+
+						</div>
+						<div class="text">
+							<span class="message-text">Hi! I am from Japan.</span>
+						</div>
+					</div>
+					<div class="message tg-message message-3">
+						<div class="photo">
+							<a href="http://www.freepik.com">Designed by Freepik</a>
+							<img src="imgs/avatar3.png" alt="Designed by Freepik">
+						</div>
+						<div class="username">
+							<span class="username-text">Andrey Makarof</span>
+						</div>
+						<div class="social-icon">
+
+						</div>
+						<div class="date">
+
+						</div>
+						<div class="text">
+							<span class="message-text">Hey!</span>
+						</div>
+					</div>
+				</div>
+
+				<script>
+					let messagesWrapper = document.getElementById('messages-wrapper');
+					parallax(messagesWrapper, messagesWrapper.querySelector('.message-1'), 0.15, 'down', 45);
+					parallax(messagesWrapper, messagesWrapper.querySelector('.message-2'), 0.25, 'down', 36);
+					parallax(messagesWrapper, messagesWrapper.querySelector('.message-3'), 0.35, 'down', 26.5);
+				</script>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		let inf2 = document.getElementById('inf-2');
+		parallax(inf2, inf2.querySelector('.text-block'), 0.2);
+
+		let scrolled = false,
+			phoneWrapper = inf2.querySelector('.phone-wrapper'),
+			dist = inf2.getBoundingClientRect().top;
+		window.addEventListener('scroll', (event) => {
+			if (scrollY - pageYOffset> dist)
+			{
+				if (!scrolled)
+				{
+					scrolled = true;
+					phoneWrapper.style.position = 'fixed';
+				}
+			}
+			else
+			{
+				if (scrolled)
+				{
+					scrolled = false;
+					phoneWrapper.style.position = 'absolute';
+				}
+			}
+		});
+
+		// let messagesWrapper = document.getElementById('messages-wrapper');
+		window.addEventListener('scroll', (event) => {
+			if (scrollY - phoneWrapper.getBoundingClientRect().height/2 > inf2.getBoundingClientRect().bottom)
+			{
+				messagesWrapper.style.opacity = '0';
+			}
+			else
+			{
+				messagesWrapper.style.opacity = '1';
+			}
+		});
+	</script>
+
+
+
+	<div class="info-block block-3" id="inf-3">
+		<div class="text-block">
+			<span class="text">Combine news feed into one</span>
+		</div>
+	</div>
+
+	<script>
+		let inf3 = document.getElementById('inf-3');
+		parallax(inf3, inf3.querySelector('.text-block'), 0.1);
+	</script>
+
+	<div class="info-block" id="inf-4">
+		<div class="text-block">
+			<span class="text">"Shadow chat"<br>
+				Break the context of your dialogue</span>
+		</div>
+	</div>
+
+	<script>
+		let inf4 = document.getElementById('inf-4');
+		parallax(inf4, inf4.querySelector('.text-block'), 0.1);
+	</script>
+
+</body>
+</html>
